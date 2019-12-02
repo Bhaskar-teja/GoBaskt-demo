@@ -1,0 +1,33 @@
+.pb-5, .py-5 {
+    padding-bottom: 3rem!important;
+}
+
+.pt-5, .py-5 {
+    padding-top: 3rem!important;
+}
+.bg-dark {
+    background-color: #2d3263;
+}
+.text-white{
+    color: white;
+}
+
+.text-center-csss > a{
+    color:white;
+    text-decoration: none;
+}
+.social-css{
+    margin-top: 25px;
+    font-size: 26px;
+}
+.social-buttonsx > .list-inline-item > a > i{
+    color:white;
+}
+.social-buttonsx > li{
+    margin-left: 14px;
+}
+
+.copy-css{
+font-size: 14px; 
+margin-top: 15px;
+}

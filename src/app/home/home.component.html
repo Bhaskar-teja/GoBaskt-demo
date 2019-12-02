@@ -1,0 +1,664 @@
+<div class="container-fluid p-0">
+  <div class="bg-light-blue">
+    <div class="container mt-0">
+      <!-- Banner -->
+      <div class="banner">
+        <img class="img-fluid" src="assets/images/banner.png" alt="banner" />
+      </div>
+      <!-- End Banner -->
+    </div>
+  </div>
+  <!-- Search -->
+  <div class="bg-light-blue">
+    <div class="container mt-0">
+      <form class="waves-light" mdbWavesEffect>
+        <div class="md-form pt-5 text-center">
+          <input class="form-control cus-search" type="text" placeholder="search for the best offers near you">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End search -->
+  <!-- <angular-image-slider [images]="imagesUrl"></angular-image-slider> -->
+  <!-- <ng-image-slider [images]="imageObject" [autoSlide]="sliderAutoSlide ? 1 : 0" #nav></ng-image-slider> -->
+  <!-- <ng-image-slider *ngIf="showSlider" #nav
+  [images]="imageObject"
+  [infinite]="sliderInfinite"
+  [imagePopup]="sliderImagePopup"
+  [showArrow]="sliderArrowShow"
+  [imageSize]="{width: sliderImageWidth, height: sliderImageHeight}"
+  [autoSlide]="sliderAutoSlide ? 1 : 0"
+  [slideImage]="sliderSlideImage"
+  [animationSpeed]="sliderAnimationSpeed"></ng-image-slider> -->
+  <!-- <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+      <div class="item" *ngFor="let image of images;let i= index">
+        <img class="slide-image" src="{{image.image}}" >
+        <div class="slide-text">
+          <h4>{{image.text}}</h4>
+        </div>
+      </div>
+    </owl-carousel> -->
+    <!-- <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let image of images;let i= index">
+          <img class="slide-image" src="{{image.image}}" >
+          <div class="slide-text">
+            <h4>{{image.text}}</h4>
+          </div>
+        </div>
+      </owl-carousel> -->
+  <!-- Gallery -->
+  <div class="container" id="explore">
+    <section class="explore-gallery col mt-3">
+      <div class="row position-relative tabs-box">
+        <ngb-tabset type="pills">
+          <ngb-tab title="ALL">
+            <ng-template ngbTabContent>
+              <div class="tab-pane fade active show" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="images-container pt-5">
+                  <div class="text-center">
+                    <img src="assets/images/food-dining.png">
+                    <p class="categories-text">Food & Dining</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/apparel.png">
+                    <p class="categories-text">Fashion & Apparel</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/health-fitness.png">
+                    <p class="categories-text">Health & Fitness</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/home_appliances.png">
+                    <p class="categories-text">Home Appliances</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/entertainment.png">
+                    <p class="categories-text">Entertainment</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/medical.png">
+                    <p class="categories-text">Medicines & Drugs</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/electronics.png">
+                    <p class="categories-text">Electronics</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/more.png">
+                    <p class="categories-text">more</p>
+                  </div>
+                </div>
+                <div class="row m-0 mt-3">
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/5374.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/5454.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/7913.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/1601.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
+              <div class="row">
+                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
+                <div class="col-sm-8 pr-0">
+                  <select class="custom-select custom-select-sm mt-1">
+                    <option selected="">All</option>
+                    <option value="1">Celebrities</option>
+                    <option value="2">Brands</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          <ngb-tab>
+            <ng-template ngbTabTitle>BRAND OFFERS</ng-template>
+            <ng-template ngbTabContent>
+              <div class="tab-pane fade active show" id="celeb" role="tabpanel" aria-labelledby="Celeb-tab">
+                <div class="images-container pt-5">
+                  <div class="text-center">
+                    <img src="assets/images/food-dining.png">
+                    <p class="categories-text">Food & Dining</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/apparel.png">
+                    <p class="categories-text">Fashion & Apparel</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/health-fitness.png">
+                    <p class="categories-text">Health & Fitness</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/home_appliances.png">
+                    <p class="categories-text">Home Appliances</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/entertainment.png">
+                    <p class="categories-text">Entertainment</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/medical.png">
+                    <p class="categories-text">Medicines & Drugs</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/electronics.png">
+                    <p class="categories-text">Electronics</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/more.png">
+                    <p class="categories-text">more</p>
+                  </div>
+                </div>
+                <div class="row m-0 mt-3">
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/group.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/1601.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/7913.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/354.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
+              <div class="row">
+                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
+                <div class="col-sm-8 pr-0">
+                  <select class="custom-select custom-select-sm mt-1">
+                    <option selected="">All</option>
+                    <option value="1">Celebrities</option>
+                    <option value="2">Brands</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          <ngb-tab>
+            <ng-template ngbTabTitle>LOCAL OFFERS</ng-template>
+            <ng-template ngbTabContent>
+              <div class="tab-pane fade  active show" id="brand" role="tabpanel" aria-labelledby="brand-tab">
+                <div class="images-container pt-5">
+                  <div class="text-center">
+                    <img src="assets/images/food-dining.png">
+                    <p class="categories-text">Food & Dining</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/apparel.png">
+                    <p class="categories-text">Fashion & Apparel</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/health-fitness.png">
+                    <p class="categories-text">Health & Fitness</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/home_appliances.png">
+                    <p class="categories-text">Home Appliances</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/entertainment.png">
+                    <p class="categories-text">Entertainment</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/medical.png">
+                    <p class="categories-text">Medicines & Drugs</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/electronics.png">
+                    <p class="categories-text">Electronics</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/more.png">
+                    <p class="categories-text">more</p>
+                  </div>
+                </div>
+                <div class="row m-0 mt-3">
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/354.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/1601.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/5454.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 image-trans p-1">
+                    <img class="card-img" src="assets/images/5374.png" alt="">
+                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <div class="desc">
+                      <div class="col-12 p-0">
+                        <div class="row m-0">
+                          <div class="col-8 pl-4">
+                            <span class="f-9 f-bold">BRAND OFFER</span>
+                            <h5 class="f-bold">ZARA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="clr-green f-bold">$ 9 off</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center m-minus16">
+                        <a class="btn-clr-blue-save">
+                          <img src="assets/images/save.png" alt=""> Save</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
+              <div class="row">
+                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
+                <div class="col-sm-8 pr-0">
+                  <select class="custom-select custom-select-sm mt-1">
+                    <option selected="">All</option>
+                    <option value="1">Celebrities</option>
+                    <option value="2">Brands</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+        </ngb-tabset>
+      </div>
+    </section>
+  </div>
+  <!-- End Gallery -->
+
+
+
+
+  <!-- 
+  <div *ngIf="this.selectedOffers == 'L' || this.selectedOffers == 'LB'" class="row" style="background-color: #f5f5f5;">
+    <div class="container">
+      <div class="">
+        <h4 class="localoffersh3">Local Offers <a [routerLink]="['/localoffers']" target="_blank"
+            class="pull-right">More > ></a></h4>
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-sm-3">
+            <div class="selectdiv">
+              <select>
+                <option selected> Search by location </option>
+                <option>Houston,TX</option>
+                <option>Dallas, TX</option>
+                <option>Austin, TX</option>
+                <option>Orlando, FL</option>
+                <option>Miami, FL</option>
+                <option>Las Vegas, NV</option>
+                <option>Las Vegas, CA</option>
+                <option>San Francisco, CA </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="selectdiv ">
+              <select>
+                <option selected> Sort By</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Last long option</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="selectdiv ">
+              <select>
+                <option selected> Category </option>
+                <option>All</option>
+                <option>Restaurants</option>
+                <option>Grocery Store</option>
+                <option>Auto Maintenance</option>
+                <option>Beauty Saloon</option>
+                <option>Haircut</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roww">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roww">
+        <div>
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint()" (afterChange)="afterChange()"
+            (beforeChange)="beforeChange()">
+            <div ngxSlickItem *ngFor="let localoffer of localOffers" class="slide col-lg-3">
+              <div class="card">
+
+                <img class="image-responsive img-radius img-radius-css-cst" src="{{localoffer.digitalOfferLink}}"
+                  alt="Generic placeholder image" width="100%">
+                <div class="product-detail">
+                  <h4 class="product-h4 font-16">{{localoffer.businessName ||'N/A'}}</h4>
+                  <p class="product-p1">44 south wasghaton stret hindsalde</p>
+                  <p class="product-p1 font-9">4.5 <rating [(ngModel)]="starsCount" [readonly]="true"></rating> (1001)
+                  </p>
+                  <p class="cashback-css">5% Cashback</p>
+                </div>
+                <div class="row row-heightknw">
+                  <div class="col-sm-6 text-center padding-top"><a href="#">Know More</a></div>
+                  <div class="col-sm-6"><button class="btn btn-primary btn-block btn-rd btn-rdx"
+                      (click)="addToCartLocal(localoffer)">Save</button></div>
+                </div>
+
+              </div>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div *ngIf="this.selectedOffers == 'B' || this.selectedOffers == 'LB'" class="row" style="margin-top: 10px;">
+    <div class="container">
+      <div class="">
+        <h4 class="localoffersh3">Brand Offers </h4>
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-sm-3">
+            <div class="selectdiv ">
+              <select #t (change)="callType(t.value)">
+                <option selected> Search by Category </option>
+                <option> All </option>
+                <option>Foods</option>
+                <option>contact lenses</option>
+                <option>Beauty</option>
+                <option>personal care</option>
+                <option>Medicine and treatment</option>
+                <option>vitamiins and supplements</option>
+                <option>Households</option>
+                <option>home health care solutions</option>
+                <option>Grocery</option>
+                <option>Baby & kids toys</option>
+                <option>Fitness and nutrition</option>
+                <option>Seasonal</option>
+                <option>Natural and organic</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="selectdiv ">
+              <select>
+                <option selected> Sort By</option>
+                <option>All</option>
+                <option>Most recent</option>
+                <option>Expiring soon</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+
+
+        <div class="row" style="margin-bottom: 20px">
+          <div class="col-lg-3" *ngFor="let brandoffer of brandOffers;">
+            <div class="col-sm-12 card">
+              <div class="ribbon-wrapper"
+                *ngIf="((brandoffer.expiration | amDifference: today : 'days') > 0) && ((brandoffer.expiration | amDifference: today : 'days') <= 3)">
+                <div class="ribbon-front">
+                  {{brandoffer.expiration | amDifference: today : 'days'}} <span
+                    *ngIf="(brandoffer.expiration | amDifference: today : 'days') == 1">day left</span><span
+                    *ngIf="(brandoffer.expiration | amDifference: today : 'days') > 1">days left</span>
+                </div>
+                <div class="ribbon-edge-topleft"></div>
+                <div class="ribbon-edge-topright"></div>
+                <div class="ribbon-edge-bottomleft"></div>
+                <div class="ribbon-edge-bottomright"></div>
+                <div class="ribbon-back-left"></div>
+                <div class="ribbon-back-right"></div>
+              </div>
+
+              <h3 class="newheding branddesc width100" title="{{brandoffer.description}}"> {{brandoffer.description}}
+              </h3>
+              <div class="col-sm-4 text-center productdet"><img class="brand-img-css img-responsive"
+                  src="{{brandoffer.image}}" alt="Generic placeholder image" /></div>
+              <div class="col-sm-8 productdet">
+                <div class="product-detail">
+                  <h4 class="product-h4">{{brandoffer.brand}}</h4>
+                  <p class="product-p1 branddesc">{{brandoffer.description}}</p>
+                  <p class="product-p1">4.5 <rating [(ngModel)]="starsCount" [readonly]="true"></rating> (1001)</p>
+                  <p class="cashback-css">5% Cashback</p>
+                  <div><a href="javascript:void(0)" (click)="openInNewTab(brandoffer.link)">Know More > ></a></div>
+                </div>
+              </div>
+              <div class="row" style="height: 166px; margin-right: -16px;">
+                <button class="btn btn-primary btn-block brand-btn-rd btn-rdx"
+                  (click)="addToCartBrand(brandoffer)">Save</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row h-10 justify-content-center text-center" style="margin: 50px;">
+            <i *ngIf="initload" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            <a *ngIf="!initload && viewmored > 0" href="javascript:void(0)" (click)="loadMore()"
+              class="viewmore-text-center">View More</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</div>

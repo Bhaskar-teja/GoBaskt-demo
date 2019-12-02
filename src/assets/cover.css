@@ -1,0 +1,127 @@
+.container-margin-top{
+  margin-top: 60px;
+}
+.navbar-inverse{
+  background-color: #387FA8  ;
+  border-color: #387FA8  ;
+  background-image: linear-gradient(to bottom,#387FA8,#387FA8 100%);
+  border-radius:0px;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar{
+  min-height: 65px;
+}
+
+
+/*
+ * Header
+ */
+ .masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+.container{
+ margin-top: 7px; 
+}
+@media (min-width: 768px){
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -15px;
+    padding-top: 8px;
+}
+}
+
+
+  
+.slick-slider {
+  width: 90%;
+  margin: auto;
+}
+ 
+.nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 118px !important;
+}
+ 
+.prev-slide.slick-disabled,
+.next-slide.slick-disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+ 
+.prev-slide {
+  /* background: url("../../assets/images/next-i.png") no-repeat scroll 0 0; */
+  left: -33px;
+  font-size: 44px;
+
+}
+ 
+.next-slide {
+  /* background:  url("../../assets/images/next-in.png") no-repeat scroll 0 0px; */
+  right: -33px;
+  font-size: 44px;
+}
+ 
+.prev-slide:hover {
+  background-position: 0px -53px;
+}
+ 
+.next-slide:hover {
+  background-position: -24px -53px;
+}
+
+.slick-active:focus{
+  outline:0;
+}
+.roww{
+padding-left: 20px;
+padding-right: 20px; 
+}
+
+#quote-carousel > .carousel-indicators > .active{
+  background-color: #387FA8 !important;
+}

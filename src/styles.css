@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+html, body { height: 100%; }
+
+body{
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: url("../src/assets/images/bg_signup.png"); */
+}
+.signup-bg{
+    background-image: url("../src/assets/images/bg_signup.png");
+}
+.m-0{
+    margin: 0;
+}
+.d-inline{
+    display: inline-block;
+}
+.f-bold{
+    font-weight: 600;
+}
+.f-9{
+    font-size: 9px;
+}
+.f-15{
+    font-size: 15px;
+}
+.f-18{
+    font-size: 18px;
+}
+.f-28{
+    font-size: 28px;
+}
+.m-0{
+    margin: 0;
+}
+.mr-10{
+    margin-right: 10px;;
+}
+.m-minus16{
+    margin-bottom: -16px;
+}
+.pb-80{
+    padding-bottom: 80px;
+}
+.p-0{
+    padding : 0px;
+}
+.p-16{
+    padding: 16px;
+}
+.pt-75{
+    padding-top: 75px;
+}
+.clr-blue{
+    color: #262b64;
+    border-bottom: 2px solid #262b64;
+}
+.bg-light-blue{
+    background: #eff6ff;
+}
+.clr-green{
+    color: #417505;
+}
+
+.bg-blue{
+    background-color: #2d3263;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #182280;
+    font-weight: 600;
+    text-shadow: none;
+}
+.btn-clr-blue-save{
+    color: #fff !important;
+    margin-bottom: -16px;
+    outline: none;
+    padding: 10px 36px;
+    border-radius: 25.5px;
+    background-color: #2d3263;
+    font-size: 16px;
+}
+.btn-clr-blue{
+    color: #fff;
+    outline: none;
+    padding: 6px;
+    border-radius: 25.5px;
+    background-color: #2d3263;
+    font-size: 16px;
+}
+.cus-search{
+    width: 743px !important;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 9px 0 rgba(136, 136, 136, 0.39);
+}
+
+.cus-bg{
+    border-radius: 15.4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: #2d3263;
+}
+.images-container {
+    justify-content: space-between;
+    display: flex;
+}
+.categories-text {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 16px;
+    width: 100px;
+}
+.copy-right{
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
