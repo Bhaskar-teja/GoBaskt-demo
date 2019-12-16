@@ -1,1 +1,39 @@
-<h2>Login</h2>
+<div class="pt-3 login-bg">
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-md-6">
+                <img class="img-fluid max-165" src="assets/images/login-bg.png" alt="signup" />
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default cus-bg">
+                    <div>
+                        <h3 class="title-partner">Partner Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group">
+                                <input type="email" class="form-control inpt" formControlName="emailId" id="emailId"
+                                    placeholder="Enter your email"
+                                    [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }">
+                                <span class="invalid-feedback cust-feedback-align"
+                                    *ngIf="f.emailId.errors?.required">Username is required</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control inpt" formControlName="password" id="password"
+                                    placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <span class="invalid-feedback cust-feedback-align"
+                                    *ngIf="f.password.errors?.required">Password is required</span>
+                            </div>
+                        </form>
+                        <div class="form-group last">
+                                <button type="submit" [routerLink]="['/home']" (click)="onSubmit()" class="col-sm-12 btn-clr-blue btn btn-sm">
+                                    Login </button>
+                                <p class="text-center pt-3">Trying to connect to us to be a partner ? <span
+                                        class="f-bold clr-blue">Click Here</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

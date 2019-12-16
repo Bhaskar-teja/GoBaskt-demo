@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommunicationService } from '../service/communication.service'
+import { CommunicationService } from '../shared/core/service/communication.service'
 import * as $ from 'jquery';
 
 @Component({

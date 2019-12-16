@@ -81,4 +81,11 @@ export class AppComponent {
     koreBot.show(chatConfig);
     //***CODE_END
   }
+
+  getMyLocation() {
+    const location = window.navigator && window.navigator.geolocation
+  }
+  onActivate(e, outlet){
+    outlet.scrollTop = 0;
+  }
 }

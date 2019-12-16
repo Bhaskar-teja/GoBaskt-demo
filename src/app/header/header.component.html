@@ -1,9 +1,9 @@
-<div class="bg-light-blue">
+<div class="bg-light-blue" [ngClass]="bgClass">
     <nav class="navbar navbar-expand-lg navbar-light container mt-0">
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block">
                 <!-- hidden spacer to center brand on mobile --></span>
-            <a class="navbar-brand d-none d-lg-inline-block" href="#">
+            <a [routerLink]="['/home']" class="navbar-brand d-none d-lg-inline-block" href="#">
                 <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
             </a>
             <div class="w-100 text-right">
@@ -14,36 +14,63 @@
         </div>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
             <ul class="navbar-nav ml-auto flex-nowrap">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+                <button mat-button [matMenuTriggerFor]="menu">Categories <img class="img-fluid" src="assets/images/icons/angle-down.png" alt="arrow" /></button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/food-dining.png">
+                        <span class="categories-text">Food & Dining</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/apparel.png">
+                        <span class="categories-text">Fashion & Apparel</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/health-fitness.png">
+                        <span class="categories-text">Health & Fitness</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/home_appliances.png">
+                        <span class="categories-text">Home Appliances</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/entertainment.png">
+                        <span class="categories-text">Entertainment</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/medical.png">
+                        <span class="categories-text">Medicines & Drugs</span>
+                    </button>
+                    <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/electronics.png">
+                        <span class="categories-text">Electronics</span>
+                    </button>
+                    <button mat-menu-item class="categories-text-underline">
+                        <span>View All</span>
+                    </button>
+                </mat-menu>
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/']" class="nav-link  menu-item nav-active">Content & Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" [routerLink]="['/']" class="nav-link  menu-item">Partner with us</a>
+                    <a href="#" [routerLink]="['/Login']" class="nav-link  menu-item">Partner with us</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/']" class="nav-link  menu-item">Discounted Services</a>
                 </li>
-               
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/']" class="nav-link  menu-item">
-                        <img class="img-fluid" src="assets/images/basket_icon.png" alt="Theme-Logo" /></a>
+                        <img class="img-fluid" src="assets/images/icons/location_icon.png" alt="Theme-Logo" /><span
+                            class="pl-2">Montg…</span><img class="img-fluid pl-2"
+                            src="assets/images/icons/angle-down.png" alt="Theme-Logo" /></a>
                 </li>
                 <li class="nav-item">
-                        <a href="#" [routerLink]="['/']" class="nav-link  menu-item">
-                            <img class="img-fluid" src="assets/images/profile_icon.png" alt="Theme-Logo" /></a>
-                    </li>
+                    <a href="#" [routerLink]="['/basket']" class="nav-link  menu-item">
+                        <img class="img-fluid" src="assets/images/icons/basket_icon.png" alt="Theme-Logo" /></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" [routerLink]="['/Signup']" class="nav-link  menu-item">
+                        <img class="img-fluid" src="assets/images/icons/profile_icon.png" alt="arrow" /></a>
+                </li>
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/basket']" class="nav-link  menu-item">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>

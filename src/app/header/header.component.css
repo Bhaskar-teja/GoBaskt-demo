@@ -6,4 +6,16 @@
     margin-right: -25px;
     background-color: #d9534f;
 }
+.menu-img{
+    width: 20px;
+    margin-right: 16px;
+}
+.categories-text-underline{
+    text-align: center;
+    border-top: 1px solid #000;
+    font-weight: 600;
+}
+.mat-menu-item{
+    padding: 0px 26px;
+}
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
-import { HomeService, CommunicationService } from '../service';
+// import { HomeService, CommunicationService } from '../service';
 
 
 @Component({
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   sliderSlideImage: Number = 1;
   sliderAnimationSpeed: any = 1;
  
-  constructor(private homeService: HomeService, private communicationService: CommunicationService,config: NgbTabsetConfig) { 
+  constructor(config: NgbTabsetConfig) { 
     config.justify = 'center';
   }
 
@@ -63,99 +63,99 @@ export class HomeComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.getAllBrandOffers(this.initPage);
-    this.getAllLocalOffers();
-    this.onLoadCart();
+    // this.getAllBrandOffers(this.initPage);
+    // this.getAllLocalOffers();
+    // this.onLoadCart();
  }
 
   visibleOffers(selectedvalue) {
     this.selectedOffers = selectedvalue;
   }
 
-  loadMore() {
-    this.viewmored = 0;
-    this.initPage = this.initPage + 1;
-    this.getAllBrandOffersLoad(this.initPage);
-  }
+  // loadMore() {
+  //   this.viewmored = 0;
+  //   this.initPage = this.initPage + 1;
+  //   this.getAllBrandOffersLoad(this.initPage);
+  // }
 
 
-  onLoadCart() {
-    if (localStorage.getItem("localoffercart")) {
-      this.localoffercart = JSON.parse(localStorage.getItem("localoffercart"));
-    }
-    if (localStorage.getItem("brandoffercart")) {
-      this.brandoffercart = JSON.parse(localStorage.getItem("brandoffercart"));
-    }
-    this.cartlength = 0;
-    if(this.localoffercart && this.localoffercart.length){
-       this.cartlength += this.localoffercart.length;
-    }
-    if(this.brandoffercart && this.brandoffercart.length){
-      this.cartlength += this.brandoffercart.length;
-    }
-    this.communicationService.setSubject({value: this.cartlength});
-    }
+  // onLoadCart() {
+  //   if (localStorage.getItem("localoffercart")) {
+  //     this.localoffercart = JSON.parse(localStorage.getItem("localoffercart"));
+  //   }
+  //   if (localStorage.getItem("brandoffercart")) {
+  //     this.brandoffercart = JSON.parse(localStorage.getItem("brandoffercart"));
+  //   }
+  //   this.cartlength = 0;
+  //   if(this.localoffercart && this.localoffercart.length){
+  //      this.cartlength += this.localoffercart.length;
+  //   }
+  //   if(this.brandoffercart && this.brandoffercart.length){
+  //     this.cartlength += this.brandoffercart.length;
+  //   }
+  //   this.communicationService.setSubject({value: this.cartlength});
+  //   }
 
-  addToCartBrand(param) {
-    console.log(param);
-    this.brandoffercart.push(param);
-    localStorage.setItem("brandoffercart", JSON.stringify(this.brandoffercart));
-    this.onLoadCart();
-  }
+  // addToCartBrand(param) {
+  //   console.log(param);
+  //   this.brandoffercart.push(param);
+  //   localStorage.setItem("brandoffercart", JSON.stringify(this.brandoffercart));
+  //   this.onLoadCart();
+  // }
 
-  addToCartLocal(param) {
-    console.log(param);
-    this.localoffercart.push(param);
-    localStorage.setItem("localoffercart", JSON.stringify(this.localoffercart));
-    this.onLoadCart();
-  }
+  // addToCartLocal(param) {
+  //   console.log(param);
+  //   this.localoffercart.push(param);
+  //   localStorage.setItem("localoffercart", JSON.stringify(this.localoffercart));
+  //   this.onLoadCart();
+  // }
 
-  getAllBrandOffers(page) {
-    this.initload = true;
-    this.homeService.getAllBrandOffers(page).subscribe((data) => {
-      this.brandOffers = data;
-      this.initload = false;
-    }, (error) => {
-      this.initload = false;
-      console.log(error)
-    })
-  }
+  // getAllBrandOffers(page) {
+  //   this.initload = true;
+  //   this.homeService.getAllBrandOffers(page).subscribe((data) => {
+  //     this.brandOffers = data;
+  //     this.initload = false;
+  //   }, (error) => {
+  //     this.initload = false;
+  //     console.log(error)
+  //   })
+  // }
 
-  getAllBrandOffersLoad(page) {
-    this.initload = true;
-    this.homeService.getAllBrandOffers(page).subscribe((data) => {
-      if(data.length > 0){
-        this.viewmored = 1;
-      }
-      data.forEach(element => {
-        this.brandOffers.push(element);
-      });
-      this.initload = false;
-    }, (error) => {
-      this.initload = false;
-      console.log(error)
-    })
-  }
+  // getAllBrandOffersLoad(page) {
+  //   this.initload = true;
+  //   this.homeService.getAllBrandOffers(page).subscribe((data) => {
+  //     if(data.length > 0){
+  //       this.viewmored = 1;
+  //     }
+  //     data.forEach(element => {
+  //       this.brandOffers.push(element);
+  //     });
+  //     this.initload = false;
+  //   }, (error) => {
+  //     this.initload = false;
+  //     console.log(error)
+  //   })
+  // }
 
-  getAllLocalOffers() {
-    this.homeService.getAllLocalOffers().subscribe((data) => {
-      this.localOffers = data;
-    }, (error) => {
-      console.log(error)
-    })
-  }
+  // getAllLocalOffers() {
+  //   this.homeService.getAllLocalOffers().subscribe((data) => {
+  //     this.localOffers = data;
+  //   }, (error) => {
+  //     console.log(error)
+  //   })
+  // }
 
-  callType(value) {
-    this.homeService.getAllBrandOffersCallType(value).subscribe((data) => {
-      this.brandOffers = data;
-    }, (error) => {
-      console.log(error)
-    })
-  }
-  openInNewTab(url) {
-    var win = window.open(url, '_blank');
-    win.focus();
-  }
+  // callType(value) {
+  //   this.homeService.getAllBrandOffersCallType(value).subscribe((data) => {
+  //     this.brandOffers = data;
+  //   }, (error) => {
+  //     console.log(error)
+  //   })
+  // }
+  // openInNewTab(url) {
+  //   var win = window.open(url, '_blank');
+  //   win.focus();
+  // }
 
 //   imageObject: Array<object> = [{
 //     image: 'assets/images/5374.png',

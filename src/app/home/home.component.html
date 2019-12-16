@@ -12,7 +12,7 @@
   <div class="bg-light-blue">
     <div class="container mt-0">
       <form class="waves-light" mdbWavesEffect>
-        <div class="md-form pt-5 text-center">
+        <div class="md-form pt-5 pb-5 text-center">
           <input class="form-control cus-search" type="text" placeholder="search for the best offers near you">
         </div>
       </form>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </owl-carousel> -->
-    <!-- <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+  <!-- <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
         <div class="item" *ngFor="let image of images;let i= index">
           <img class="slide-image" src="{{image.image}}" >
           <div class="slide-text">
@@ -47,8 +47,10 @@
         </div>
       </owl-carousel> -->
   <!-- Gallery -->
-  <div class="container" id="explore">
-    <section class="explore-gallery col mt-3">
+
+
+  <div class="container py-5" id="explore">
+    <section class="explore-gallery col">
       <div class="row position-relative tabs-box">
         <ngb-tabset type="pills">
           <ngb-tab title="ALL">
@@ -56,42 +58,42 @@
               <div class="tab-pane fade active show" id="all" role="tabpanel" aria-labelledby="all-tab">
                 <div class="images-container pt-5">
                   <div class="text-center">
-                    <img src="assets/images/food-dining.png">
+                    <img src="assets/images/categories/food-dining.png">
                     <p class="categories-text">Food & Dining</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/apparel.png">
+                    <img src="assets/images/categories/apparel.png">
                     <p class="categories-text">Fashion & Apparel</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/health-fitness.png">
+                    <img src="assets/images/categories/health-fitness.png">
                     <p class="categories-text">Health & Fitness</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/home_appliances.png">
+                    <img src="assets/images/categories/home_appliances.png">
                     <p class="categories-text">Home Appliances</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/entertainment.png">
+                    <img src="assets/images/categories/entertainment.png">
                     <p class="categories-text">Entertainment</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/medical.png">
+                    <img src="assets/images/categories/medical.png">
                     <p class="categories-text">Medicines & Drugs</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/electronics.png">
+                    <img src="assets/images/categories/electronics.png">
                     <p class="categories-text">Electronics</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/more.png">
+                    <img src="assets/images/icons/more.png">
                     <p class="categories-text">more</p>
                   </div>
                 </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/5374.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/5374.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -106,14 +108,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/5454.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/5454.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -128,14 +130,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/7913.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/7913.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -150,14 +152,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/1601.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/1601.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -172,69 +174,59 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </ng-template>
+
           </ngb-tab>
-          <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
-              <div class="row">
-                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
-                <div class="col-sm-8 pr-0">
-                  <select class="custom-select custom-select-sm mt-1">
-                    <option selected="">All</option>
-                    <option value="1">Celebrities</option>
-                    <option value="2">Brands</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+
           <ngb-tab>
             <ng-template ngbTabTitle>BRAND OFFERS</ng-template>
             <ng-template ngbTabContent>
               <div class="tab-pane fade active show" id="celeb" role="tabpanel" aria-labelledby="Celeb-tab">
-                <div class="images-container pt-5">
-                  <div class="text-center">
-                    <img src="assets/images/food-dining.png">
-                    <p class="categories-text">Food & Dining</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/apparel.png">
-                    <p class="categories-text">Fashion & Apparel</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/health-fitness.png">
-                    <p class="categories-text">Health & Fitness</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/home_appliances.png">
-                    <p class="categories-text">Home Appliances</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/entertainment.png">
-                    <p class="categories-text">Entertainment</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/medical.png">
-                    <p class="categories-text">Medicines & Drugs</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/electronics.png">
-                    <p class="categories-text">Electronics</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/more.png">
-                    <p class="categories-text">more</p>
-                  </div>
-                </div>
+                  <div class="images-container pt-5">
+                      <div class="text-center">
+                        <img src="assets/images/categories/food-dining.png">
+                        <p class="categories-text">Food & Dining</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/apparel.png">
+                        <p class="categories-text">Fashion & Apparel</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/health-fitness.png">
+                        <p class="categories-text">Health & Fitness</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/home_appliances.png">
+                        <p class="categories-text">Home Appliances</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/entertainment.png">
+                        <p class="categories-text">Entertainment</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/medical.png">
+                        <p class="categories-text">Medicines & Drugs</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/electronics.png">
+                        <p class="categories-text">Electronics</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/icons/more.png">
+                        <p class="categories-text">more</p>
+                      </div>
+                    </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/group.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/group.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -249,14 +241,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/1601.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/1601.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -271,14 +263,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/7913.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/7913.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -293,14 +285,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/354.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/354.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -315,8 +307,8 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
@@ -325,59 +317,59 @@
             </ng-template>
           </ngb-tab>
           <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
-              <div class="row">
-                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
-                <div class="col-sm-8 pr-0">
-                  <select class="custom-select custom-select-sm mt-1">
-                    <option selected="">All</option>
-                    <option value="1">Celebrities</option>
-                    <option value="2">Brands</option>
-                  </select>
-                </div>
+            <div class="row">
+              <label for="colFormLabelSm" class="col-form-label">Sort by</label>
+              <div class="col-sm-8 pr-0">
+                <select class="custom-select custom-select-sm mt-1">
+                  <option selected="">All</option>
+                  <option value="1">Brands</option>
+                  <option value="2">Local</option>
+                </select>
               </div>
             </div>
+          </div>
           <ngb-tab>
             <ng-template ngbTabTitle>LOCAL OFFERS</ng-template>
             <ng-template ngbTabContent>
               <div class="tab-pane fade  active show" id="brand" role="tabpanel" aria-labelledby="brand-tab">
-                <div class="images-container pt-5">
-                  <div class="text-center">
-                    <img src="assets/images/food-dining.png">
-                    <p class="categories-text">Food & Dining</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/apparel.png">
-                    <p class="categories-text">Fashion & Apparel</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/health-fitness.png">
-                    <p class="categories-text">Health & Fitness</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/home_appliances.png">
-                    <p class="categories-text">Home Appliances</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/entertainment.png">
-                    <p class="categories-text">Entertainment</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/medical.png">
-                    <p class="categories-text">Medicines & Drugs</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/electronics.png">
-                    <p class="categories-text">Electronics</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="assets/images/more.png">
-                    <p class="categories-text">more</p>
-                  </div>
-                </div>
+                  <div class="images-container pt-5">
+                      <div class="text-center">
+                        <img src="assets/images/categories/food-dining.png">
+                        <p class="categories-text">Food & Dining</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/apparel.png">
+                        <p class="categories-text">Fashion & Apparel</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/health-fitness.png">
+                        <p class="categories-text">Health & Fitness</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/home_appliances.png">
+                        <p class="categories-text">Home Appliances</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/entertainment.png">
+                        <p class="categories-text">Entertainment</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/medical.png">
+                        <p class="categories-text">Medicines & Drugs</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/categories/electronics.png">
+                        <p class="categories-text">Electronics</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/images/icons/more.png">
+                        <p class="categories-text">more</p>
+                      </div>
+                    </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/354.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/354.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -392,14 +384,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/1601.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/1601.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -414,14 +406,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/5454.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/5454.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -436,14 +428,14 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 image-trans p-1">
-                    <img class="card-img" src="assets/images/5374.png" alt="">
-                    <img class="card-img" src="assets/images/coupon-background.png" alt="">
+                    <img class="card-img" src="assets/images/products/5374.png" alt="">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
                       <div class="col-12 p-0">
                         <div class="row m-0">
@@ -458,8 +450,8 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save">
-                          <img src="assets/images/save.png" alt=""> Save</a>
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']" >
+                          <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
@@ -468,20 +460,39 @@
             </ng-template>
           </ngb-tab>
           <div class="col-3 py-2 wrap-txt-right position-absolute d-inline-flex">
-              <div class="row">
-                <label for="colFormLabelSm" class="col-form-label">Sort by</label>
-                <div class="col-sm-8 pr-0">
-                  <select class="custom-select custom-select-sm mt-1">
-                    <option selected="">All</option>
-                    <option value="1">Celebrities</option>
-                    <option value="2">Brands</option>
-                  </select>
-                </div>
+            <div class="row">
+              <label for="colFormLabelSm" class="col-form-label">Sort by</label>
+              <div class="col-sm-8 pr-0">
+                <select class="custom-select custom-select-sm mt-1">
+                  <option selected="">All</option>
+                  <option value="1">Local</option>
+                  <option value="2">Brands</option>
+                </select>
               </div>
             </div>
+          </div>
         </ngb-tabset>
+        <div class="col-3 wrap-txt-right position-absolute right-0">
+          <div class="row">
+            <label for="colFormLabelSm" class="col-form-label clr-blue-light">Sort by</label>
+            <div class="col-sm-8 pr-0">
+              <select class="custom-select custom-select-sm mt-1 border-0 f-bold clr-blue">
+                <option selected="">All Options</option>
+                <option value="1">Brand</option>
+                <option value="2">Local</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 wrap-txt-right position-absolute ">
+            <div class="row">
+              <h5 class="col-form-label clr-blue-light f-bold">Browser</h5>
+            </div>
+          </div>
       </div>
+
     </section>
+
   </div>
   <!-- End Gallery -->
 

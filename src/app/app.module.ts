@@ -2,9 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from "@angular/http";
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from '../app/shared/core/service/http.service';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule} from '@angular/material/menu';
 import { SliderModule } from 'angular-image-slider';
 import { NgImageSliderModule } from 'ng-image-slider';
 import {RatingModule} from "ngx-rating";
@@ -20,9 +23,11 @@ import { FooterComponent } from './footer/footer.component';
 import { OwlModule } from 'ngx-owl-carousel';
 
 // Services
-import { HomeService,CommunicationService  } from './service';
+import { CommunicationService  } from '../app/shared/core/service/communication.service';
+import { HomeService  } from '../app/shared/core/service/home.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -35,15 +40,18 @@ import { SignupComponent } from './signup/signup.component';
     LocalOffersComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent    
+    SignupComponent,
+    ProductDetailsComponent    
   ],
   imports: [
     FormsModule,
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     AppRoutingModule,
     SlickCarouselModule,
     OwlModule,
+    MatMenuModule,
     NgImageSliderModule,
     RatingModule,
     MomentModule,
@@ -53,7 +61,7 @@ import { SignupComponent } from './signup/signup.component';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [HomeService,CommunicationService],
+  providers: [HttpService,HomeService,CommunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

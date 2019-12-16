@@ -5,18 +5,21 @@ import { BasketComponent} from '../app/basket/basket.component'
 import { LocalOffersComponent} from '../app/local-offers/local-offers.component'
 import { LoginComponent } from '../app/login/login.component';
 import { SignupComponent } from '../app/signup/signup.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { _getOptionScrollPosition } from '@angular/material/core';
 
 
 const routes: Routes = [
-  {path: "", component: SignupComponent},
+  {path: "Signup", component: SignupComponent},
   {path: "Login", component: LoginComponent},
   {path: "home", component: HomeComponent},
   {path: "basket", component: BasketComponent},
-  {path: "localoffers", component: LocalOffersComponent}
+  {path: "localoffers", component: LocalOffersComponent},
+  {path: "productdetails", component: ProductDetailsComponent}
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

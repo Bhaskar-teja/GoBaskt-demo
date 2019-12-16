@@ -3,7 +3,7 @@
     <div class="col-md-12 text-center pb-80">
       <span class="f-18 mr-10">Make</span>
       <h3 class="d-inline f-bold f-28"> Your Brand known to All</h3>
-      <p class="f-18">Partner with us today & increase your reach <span class="f-bold clr-blue">Click Here</span></p>
+      <p class="f-18">Partner with us today & increase your reach <span [routerLink]="['/Login']" class="cursor-pointer f-bold clr-blue">Click Here</span></p>
     </div>
     <div class="row m-0">
       <div class="col-md-6">
@@ -31,13 +31,13 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-12">
-                  <input class="form-control inpt" id="inputPassword3" placeholder="Brand website link" required=""
+                  <input class="form-control inpt" id="inputPassword" placeholder="DOB" required=""
                     type="password">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-12">
-                  <input class="form-control inpt" id="inputPassword3" placeholder="About your brand / product"
+                  <input class="form-control inpt" id="inputPassword3" placeholder="Mobile Number"
                     required="" type="password">
                 </div>
               </div>
@@ -46,7 +46,7 @@
                 <div class="col-sm-12">
                   <button type="submit" [routerLink]="['/home']" class="col-sm-12 btn-clr-blue btn btn-sm">
                     Sign in</button>
-                    <p class="text-center pt-3">Already a member? <span class="f-bold clr-blue">Click Here</span></p>
+                    <p class="text-center pt-3">Already a member?<a [routerLink]="['/Login']" class="cursor-pointer f-bold clr-blue">Click Here</a></p>
                 </div>
               </div>
             </form>

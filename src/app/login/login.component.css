@@ -1,0 +1,25 @@
+.panel.panel-default {
+    padding: 28px 70px;
+    margin-left: 25px;
+    margin-top: 30%;
+    border-radius: 15.4px;
+}
+.partner-login{
+    padding-left: 15px;
+}
+
+.title-partner{
+    font-weight: 600;
+}
+
+.inpt{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 0;
+}
+
+.max-165{
+    max-width: 165%;
+}
