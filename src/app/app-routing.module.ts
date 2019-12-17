@@ -10,12 +10,13 @@ import { _getOptionScrollPosition } from '@angular/material/core';
 
 
 const routes: Routes = [
+  {path: "home", component: HomeComponent},
   {path: "Signup", component: SignupComponent},
   {path: "Login", component: LoginComponent},
-  {path: "home", component: HomeComponent},
   {path: "basket", component: BasketComponent},
   {path: "localoffers", component: LocalOffersComponent},
-  {path: "productdetails", component: ProductDetailsComponent}
+  {path: "productdetails", component: ProductDetailsComponent},
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
   ];
 
 @NgModule({
