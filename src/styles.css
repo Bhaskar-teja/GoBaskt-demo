@@ -140,6 +140,30 @@ button.mat-menu-trigger {
 button.mat-menu-item{
     outline: none;
 }
+.btn-white{
+    background: #fff;
+    color: #262b64 !important;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 16px;
+    cursor: pointer;
+}
+.btn-default.white-btn-css {
+    border-radius: 25px;
+    background: #fff;
+    color: #262b64;
+    padding: 10px 26px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.btn-default.transparent-btn-css {
+    border-radius: 25px;
+    background: #eee0;
+    color: #fff;
+    padding: 10px 26px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
 .btn-clr-blue-save{
     color: #fff !important;
     margin-bottom: -16px;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 declare const koreBotChat: any;
 declare const koreAnonymousFn: any;
 declare const $: any;
@@ -9,7 +9,7 @@ declare const $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'gobasket';
 
   myChatFun(){
@@ -88,4 +88,8 @@ export class AppComponent {
   onActivate(e, outlet){
     outlet.scrollTop = 0;
   }
+  ngOnInit(){
+    this.getMyLocation()
+  }
+  
 }
