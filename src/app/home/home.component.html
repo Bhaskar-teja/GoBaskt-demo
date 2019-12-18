@@ -86,8 +86,22 @@
                     <p class="categories-text">Electronics</p>
                   </div>
                   <div class="text-center">
-                    <img src="assets/images/icons/more.png">
-                    <p class="categories-text">more</p>
+                      <button mat-button [matMenuTriggerFor]="menu"><img src="assets/images/icons/more.png">
+                        <p class="categories-text">more</p></button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/food-dining.png">
+                          <span class="categories-text">Food & Dining</span>
+                        </button>
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/apparel.png">
+                          <span class="categories-text">Fashion & Apparel</span>
+                        </button>
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/health-fitness.png">
+                          <span class="categories-text">Health & Fitness</span>
+                        </button>
+                      </mat-menu>
                   </div>
                 </div>
                 <div class="row m-0 mt-3">
@@ -130,7 +144,8 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']" [routerLink]="['/productdetails']">
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']"
+                          [routerLink]="['/productdetails']">
                           <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
@@ -189,40 +204,54 @@
             <ng-template ngbTabTitle>BRAND OFFERS</ng-template>
             <ng-template ngbTabContent>
               <div class="tab-pane fade active show" id="celeb" role="tabpanel" aria-labelledby="Celeb-tab">
-                  <div class="images-container pt-5">
-                      <div class="text-center">
-                        <img src="assets/images/categories/food-dining.png">
-                        <p class="categories-text">Food & Dining</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/apparel.png">
-                        <p class="categories-text">Fashion & Apparel</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/health-fitness.png">
-                        <p class="categories-text">Health & Fitness</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/home_appliances.png">
-                        <p class="categories-text">Home Appliances</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/entertainment.png">
-                        <p class="categories-text">Entertainment</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/medical.png">
-                        <p class="categories-text">Medicines & Drugs</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/electronics.png">
-                        <p class="categories-text">Electronics</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/icons/more.png">
-                        <p class="categories-text">more</p>
-                      </div>
-                    </div>
+                <div class="images-container pt-5">
+                  <div class="text-center">
+                    <img src="assets/images/categories/food-dining.png">
+                    <p class="categories-text">Food & Dining</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/apparel.png">
+                    <p class="categories-text">Fashion & Apparel</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/health-fitness.png">
+                    <p class="categories-text">Health & Fitness</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/home_appliances.png">
+                    <p class="categories-text">Home Appliances</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/entertainment.png">
+                    <p class="categories-text">Entertainment</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/medical.png">
+                    <p class="categories-text">Medicines & Drugs</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/electronics.png">
+                    <p class="categories-text">Electronics</p>
+                  </div>
+                  <div class="text-center">          
+                    <button mat-button [matMenuTriggerFor]="menu"><img src="assets/images/icons/more.png">
+                      <p class="categories-text">more</p></button>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/food-dining.png">
+                        <span class="categories-text">Food & Dining</span>
+                      </button>
+                      <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/apparel.png">
+                        <span class="categories-text">Fashion & Apparel</span>
+                      </button>
+                      <button mat-menu-item>
+                        <img class="menu-img" src="assets/images/categories/health-fitness.png">
+                        <span class="categories-text">Health & Fitness</span>
+                      </button>
+                    </mat-menu>
+                  </div>
+                </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1">
                     <img class="card-img" src="assets/images/products/group.png" alt="">
@@ -321,9 +350,9 @@
               <label for="colFormLabelSm" class="col-form-label">Sort by</label>
               <div class="col-sm-8 pr-0">
                 <select class="custom-select custom-select-sm mt-1">
-                  <option selected="">All</option>
-                  <option value="1">Brands</option>
-                  <option value="2">Local</option>
+                  <option selected="">Most Popular</option>
+                  <option value="1">Recently Added</option>
+                  <option value="2">Expiring Soon</option>
                 </select>
               </div>
             </div>
@@ -332,40 +361,54 @@
             <ng-template ngbTabTitle>LOCAL OFFERS</ng-template>
             <ng-template ngbTabContent>
               <div class="tab-pane fade  active show" id="brand" role="tabpanel" aria-labelledby="brand-tab">
-                  <div class="images-container pt-5">
-                      <div class="text-center">
-                        <img src="assets/images/categories/food-dining.png">
-                        <p class="categories-text">Food & Dining</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/apparel.png">
-                        <p class="categories-text">Fashion & Apparel</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/health-fitness.png">
-                        <p class="categories-text">Health & Fitness</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/home_appliances.png">
-                        <p class="categories-text">Home Appliances</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/entertainment.png">
-                        <p class="categories-text">Entertainment</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/medical.png">
-                        <p class="categories-text">Medicines & Drugs</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/categories/electronics.png">
-                        <p class="categories-text">Electronics</p>
-                      </div>
-                      <div class="text-center">
-                        <img src="assets/images/icons/more.png">
-                        <p class="categories-text">more</p>
-                      </div>
-                    </div>
+                <div class="images-container pt-5">
+                  <div class="text-center">
+                    <img src="assets/images/categories/food-dining.png">
+                    <p class="categories-text">Food & Dining</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/apparel.png">
+                    <p class="categories-text">Fashion & Apparel</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/health-fitness.png">
+                    <p class="categories-text">Health & Fitness</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/home_appliances.png">
+                    <p class="categories-text">Home Appliances</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/entertainment.png">
+                    <p class="categories-text">Entertainment</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/medical.png">
+                    <p class="categories-text">Medicines & Drugs</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="assets/images/categories/electronics.png">
+                    <p class="categories-text">Electronics</p>
+                  </div>
+                  <div class="text-center">
+                      <button mat-button [matMenuTriggerFor]="menu"><img src="assets/images/icons/more.png">
+                        <p class="categories-text">more</p></button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/food-dining.png">
+                          <span class="categories-text">Food & Dining</span>
+                        </button>
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/apparel.png">
+                          <span class="categories-text">Fashion & Apparel</span>
+                        </button>
+                        <button mat-menu-item>
+                          <img class="menu-img" src="assets/images/categories/health-fitness.png">
+                          <span class="categories-text">Health & Fitness</span>
+                        </button>
+                      </mat-menu>
+                  </div>
+                </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1">
                     <img class="card-img" src="assets/images/products/354.png" alt="">
@@ -450,7 +493,7 @@
                         </div>
                       </div>
                       <div class="text-center m-minus16">
-                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']" >
+                        <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
                           <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
@@ -464,9 +507,9 @@
               <label for="colFormLabelSm" class="col-form-label">Sort by</label>
               <div class="col-sm-8 pr-0">
                 <select class="custom-select custom-select-sm mt-1">
-                  <option selected="">All</option>
-                  <option value="1">Local</option>
-                  <option value="2">Brands</option>
+                  <option selected="">Most Popular</option>
+                  <option value="1">Recently Added</option>
+                  <option value="2">Expiring Soon</option>
                 </select>
               </div>
             </div>
@@ -477,18 +520,18 @@
             <label for="colFormLabelSm" class="col-form-label clr-blue-light">Sort by</label>
             <div class="col-sm-8 pr-0">
               <select class="custom-select custom-select-sm mt-1 border-0 f-bold clr-blue">
-                <option selected="">All Options</option>
-                <option value="1">Brand</option>
-                <option value="2">Local</option>
+                <option selected="">Most Popular</option>
+                <option value="1">Recently Added</option>
+                <option value="2">Expiring Soon</option>
               </select>
             </div>
           </div>
         </div>
         <div class="col-3 wrap-txt-right position-absolute ">
-            <div class="row">
-              <h5 class="col-form-label clr-blue-light f-bold">Browser</h5>
-            </div>
+          <div class="row">
+            <h5 class="col-form-label clr-blue-light f-bold">Browser</h5>
           </div>
+        </div>
       </div>
 
     </section>
