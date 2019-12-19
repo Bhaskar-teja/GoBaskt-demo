@@ -8,7 +8,18 @@ import { map } from 'rxjs/operators';
 })
 export class HomeService {
 
-  constructor(private http: Http){}
+  private usersUrl: string;
+
+
+  constructor(private http: Http){
+    this.usersUrl = 'http://3.135.248.190:8083/';
+  }
+
+
+  getAllBrandOffers() {
+    return this.http
+      .get(this.usersUrl + "gobaskt/lmOffers/getLmOffers")
+  }
 
   // getAllBrandOffers(page) {
   //   return this.http

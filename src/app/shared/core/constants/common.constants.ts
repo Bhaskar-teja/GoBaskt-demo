@@ -2,6 +2,7 @@ import { environment } from './../../../../environments/environment';
 
 export const authApiUrl = {
     baseUrl: environment.authBaseUrl,
+    gobasktUrl: createAuthUrl('/lmOffers/getLmOffers'),
     postRegisterUrl: createAuthUrl('/createUser'),
     getRegisterUrl: createAuthUrl('/getUser'),
 }

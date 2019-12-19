@@ -7,15 +7,20 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HomeService {
+  private usersUrl: string;
 
-  constructor(private http: Http){}
 
-  getAllBrandOffers(page) {
-    return this.http
-      .get(globalVariable.url + "brandoffers/pagination/"+page+"/8").pipe(
-        map(res => res.json())
-    );
+  constructor(private http: Http){
+    this.usersUrl = 'http://3.135.248.190:8083/';
   }
+
+
+  getAllBrandOffers() {
+    return this.http
+      .get(this.usersUrl + "gobaskt/lmOffers/getLmOffers")
+  }
+
+  
 
   getAllLocalOffers() {
     return this.http

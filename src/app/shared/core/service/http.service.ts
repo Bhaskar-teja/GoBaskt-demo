@@ -9,11 +9,10 @@ import { HelperService } from './helper.service';
   providedIn: 'root'
 })
 export class HttpService {
-
   constructor(public http: HttpClient, private helperService: HelperService) { }
   getHeaderAfterToken() {
     return new HttpHeaders()
-      .set('Content-Type', 'application/json; charset=utf-8')
+      .set('Content-Type', 'application/json')
       .set('Accept', 'application/json; charset=utf-8')
       // .set('Authorization', this.getToken());
   }
@@ -33,4 +32,12 @@ export class HttpService {
   getUser() {
     return this.http.get(authApiUrl.getRegisterUrl, { headers: this.getHeaderAfterToken(), observe: 'response' });
   }
+
+  getOffers() {
+    return this.http.get(authApiUrl.gobasktUrl, { headers: this.getHeaderAfterToken(), observe: 'response'},);
+  }
+  // public getOffers(): Observable<any> {
+  //   return this.http.get(authApiUrl.gobasktUrl);
+  // }
+ 
 }
