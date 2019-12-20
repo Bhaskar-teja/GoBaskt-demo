@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
-import { HomeService, CommunicationService } from '../service';
+import { HomeService } from '../shared/core/service/home.service';
 import { HttpService } from '../shared/core/service/http.service';
 
 
