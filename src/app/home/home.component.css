@@ -696,8 +696,8 @@ body {
   #explore .explore-gallery .desc,
   .home .explore-gallery .desc {
     color: #000;
-    position: absolute;
-    transform: translate(0%, 0%);
+/*     position: absolute;
+    transform: translate(0%, 0%); */
     width: 100%;
     font-size: 13px; }
   #explore .explore-gallery .nav li a,
@@ -755,19 +755,27 @@ body {
       }
       .desc {
           color: #fff;
-          position: absolute;
+          /* position: absolute;
           font-size: 18px;
           bottom: 10px;
-          font-size: 13px;
+          font-size: 13px; */
           font-weight: 600;
       }
    
   
 /*  End Gallery */
-
+.m-height-150{
+  min-height: 175px;
+}
 .bg-transparent{
-  margin-top: -6px;
-  width: 104%;
-  margin-left: -6px;
+    margin-top: -6px;
+    width: 100%;
+    margin-left: -3px;
+    position: absolute;
+}
+.save-btn-pos{
+  bottom: 30px;
+  position: absolute;
+  width: 100%;
 }
     

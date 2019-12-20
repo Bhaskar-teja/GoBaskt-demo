@@ -11,36 +11,10 @@ import { HttpService } from '../shared/core/service/http.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public imagesUrl;
-  showSlider = true;
-  sliderWidth: Number = 940;
-  sliderImageWidth: Number = 250;
-  sliderImageHeight: Number = 200;
-  sliderArrowShow: Boolean = true;
-  sliderInfinite: Boolean = true;
-  sliderImagePopup: Boolean = true;
-  sliderAutoSlide: Boolean = true;
-  sliderSlideImage: Number = 1;
-  sliderAnimationSpeed: any = 1;
- 
+   localOfferDetails:[];
   constructor(config: NgbTabsetConfig,private homeService:HomeService, public httpService: HttpService) { 
     config.justify = 'center';
-  }
-
-  starsCount: any = 4.5;
-  initPage: any = 0;
-  brandOffers: any = [];
-  localOffers: any = [];
-  brandoffercart: any = [];
-  localoffercart: any = [];
-  nameimg: any = "";
-  namedes: any = "";
-  initload: any = false;
-  selectedOffers: any = "LB";
-  cartlength: any = 0;
-  viewmored: any = 1;
-  today:any;
-  
+  }  
   slideConfig = {
     "slidesToShow": 4,
     "slidesToScroll": 1,
@@ -49,19 +23,22 @@ export class HomeComponent implements OnInit {
     "infinite": false
   };
   ngOnInit() {
-    this.test();
+    this.localOffer();
  }
-  test() {
-    this.httpService.getOffers().subscribe(data=>{
-      console.log(data);
+  localOffer() {
+    this.httpService.getOffers()
+    .subscribe((response: any) => {
+      console.log(response);
+      if (response.status === 200) {
+       this.localOfferDetails = response.body.data;
+       console.log(this.localOfferDetails.values);
+      // console.log(response.body);
+      // console.log(response.body);
+      //  console.log(this.localOfferDetails);
+      //  console.log(this.localOfferDetails.data);
+      }
+    }, error => {
+      console.log(error);
     });
-  //   .subscribe((response: any) => {
-  //     console.log(response);
-  //     if (response.status === 200) {
-  //      console.log(response.data);
-  //     }
-  //   }, error => {
-  //     console.log(error);
-  //   });
    }
 }

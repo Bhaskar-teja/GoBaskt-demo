@@ -413,29 +413,29 @@
                   </div>
                 </div>
                 <div class="row m-0 mt-3">
-                  <div class="col-md-3 image-trans p-1">
+                  <div class="col-md-3 image-trans p-1" *ngFor="let item of localOfferDetails">
                     <img class="card-img" src="assets/images/products/354.png" alt="">
-                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
-                      <div class="col-12 p-0">
-                        <div class="row m-0">
-                          <div class="col-8 pl-4">
+                    <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
+                      <div class="col-12 p-0 m-height-150">
+                        <div class="row m-0 pt-3">
+                          <div class="col-8 pl-4 pr-0">
                             <span class="f-9 f-bold">BRAND OFFER</span>
-                            <h5 class="f-bold">ZARA</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h6 class="f-bold">{{item.lmname}}</h6>
+                            <p>{{item.lmdescription}}</p>
                           </div>
                           <div class="col-4">
-                            <p class="clr-green f-bold">$ 9 off</p>
+                            <p class="clr-green f-bold">{{item.lmofferType}}</p>
                           </div>
                         </div>
                       </div>
-                      <div class="text-center m-minus16">
+                      <div class="text-center save-btn-pos">
                         <a class="btn-clr-blue-save" [routerLink]="['/productdetails']">
                           <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-3 image-trans p-1">
+                  <!-- <div class="col-md-3 image-trans p-1">
                     <img class="card-img" src="assets/images/products/1601.png" alt="">
                     <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
                     <div class="desc">
@@ -500,7 +500,7 @@
                           <img src="assets/images/icons/save.png" alt=""> Save</a>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </ng-template>
