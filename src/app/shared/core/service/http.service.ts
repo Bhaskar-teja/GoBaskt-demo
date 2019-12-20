@@ -42,8 +42,6 @@ export class HttpService {
   getOffers() {
     return this.http.get(authApiUrl.gobasktUrl, { headers: this.getHeaderAfterToken(), observe: 'response'});
   }
-  // public getOffers(): Observable<any> {
-  //   return this.http.get(authApiUrl.gobasktUrl);
-  // } 
+
  
 }

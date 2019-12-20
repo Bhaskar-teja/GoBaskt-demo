@@ -679,7 +679,6 @@ body {
 
 /* Gallery */
 #explore,
-
   #explore .nav-reducer,
   .home .nav-reducer {
     margin: 26px auto 0; }
@@ -692,7 +691,8 @@ body {
     -webkit-animation: winanim 0.5s;
     animation: winanim 0.5s;
     -webkit-backface-visibility: visible;
-    backface-visibility: visible; }
+    backface-visibility: visible;
+  outline: none; }
   #explore .explore-gallery .desc,
   .home .explore-gallery .desc {
     color: #000;
@@ -778,4 +778,9 @@ body {
   position: absolute;
   width: 100%;
 }
-    
+.max-w-30{
+  max-width: 50%;
+}
+.max-h-65{
+  max-height: 65%;
+}

@@ -102,6 +102,9 @@ body{
 .login-bg{
     background-image: url("../src/assets/images/login-bg.png");
 }
+.outline-none{
+    outline: none;
+}
 
 .overlay-text-right {
     position: absolute;
@@ -168,11 +171,29 @@ button.mat-menu-item{
     color: #fff !important;
     margin-bottom: -16px;
     outline: none;
-    padding: 10px 36px;
+    padding: 10px 25px 10px 45px;
     border-radius: 25.5px;
     background-color: #2d3263;
+    border: 1px solid #2d3263;
+    font-size: 16px;
+    background-image: url("../src/assets/images/icons/save.png");
+    background-repeat: no-repeat; 
+    text-decoration: none !important;
+    background-position: 15%;
+}
+.btn-clr-blue-save:focus{
+    color: #fff !important;
+    margin-bottom: -16px;
+    outline: none;
+    padding: 10px 25px 10px 45px;
+    border-radius: 25.5px;
+    background-color: #09a40b;
+    border: 1px solid #09a40b;
     font-size: 16px;
     text-decoration: none !important;
+    background-image: url("../src/assets/images/icons/check_mark.png");
+    background-repeat: no-repeat; 
+    background-position: 15%;
 }
 .btn-clr-blue{
     color: #fff;
