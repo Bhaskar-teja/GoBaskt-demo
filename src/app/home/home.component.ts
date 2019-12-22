@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
 import { HomeService } from '../shared/core/service/home.service';
+import { CommunicationService } from '../shared/core/service/communication.service';
+
 import { HttpService } from '../shared/core/service/http.service';
 
 
@@ -11,10 +13,14 @@ import { HttpService } from '../shared/core/service/http.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-   localOfferDetails:[];
-  constructor(config: NgbTabsetConfig,private homeService:HomeService, public httpService: HttpService) { 
+
+  localOfferDetails: [];
+  localoffercart: any = [];
+  cartlength: any = 0;
+
+  constructor(config: NgbTabsetConfig, private homeService: HomeService, public httpService: HttpService,  private communicationService: CommunicationService) {
     config.justify = 'center';
-  }  
+  }
   slideConfig = {
     "slidesToShow": 4,
     "slidesToScroll": 1,
@@ -24,21 +30,40 @@ export class HomeComponent implements OnInit {
   };
   ngOnInit() {
     this.localOffer();
- }
+  }
+
+
+  onLoadCart() {
+    if (localStorage.getItem("localoffercart")) {
+      
+      this.localoffercart = JSON.parse(localStorage.getItem("localoffercart"));
+      console.log(this.localoffercart)
+    }
+    this.cartlength = 0;
+    if(this.localoffercart && this.localoffercart.length){
+       this.cartlength += this.localoffercart.length;
+    }
+   
+    this.communicationService.setSubject({value: this.cartlength});
+    }
+  
+
   localOffer() {
-    this.httpService.getOffers()
-    .subscribe((response: any) => {
+    this.httpService.getOffers().subscribe((response: any) => {
       console.log(response);
       if (response.status === 200) {
-       this.localOfferDetails = response.body.data;
-       console.log(this.localOfferDetails.values);
-      // console.log(response.body);
-      // console.log(response.body);
-      //  console.log(this.localOfferDetails);
-      //  console.log(this.localOfferDetails.data);
+        this.localOfferDetails = response.body.data;
+      //  console.log(this.localOfferDetails.values);
       }
     }, error => {
       console.log(error);
     });
-   }
+  }
+
+  addToCartLocal(param) {
+    console.log(param);
+    this.localoffercart.push(param);
+    localStorage.setItem("localoffercart", JSON.stringify(this.localoffercart));
+    this.onLoadCart();
+  }
 }

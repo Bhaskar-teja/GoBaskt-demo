@@ -1,10 +1,11 @@
 .fs-bage{
     font-size: 10px;
     position: relative;
-    top: -15px;
+    top: 10px;
+    border-radius: 25px;
     right: 4px;
-    margin-right: -25px;
-    background-color: #d9534f;
+    background-color: #ffd35f;
+    padding: 5px 7px;
 }
 .menu-img{
     width: 20px;

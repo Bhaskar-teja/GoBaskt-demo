@@ -14,7 +14,8 @@
         </div>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
             <ul class="navbar-nav ml-auto flex-nowrap">
-                <button mat-button [matMenuTriggerFor]="menu">Categories <img class="img-fluid" src="assets/images/icons/angle-down.png" alt="arrow" /></button>
+                <button mat-button [matMenuTriggerFor]="menu">Categories <img class="img-fluid"
+                        src="assets/images/icons/angle-down.png" alt="arrow" /></button>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item>
                         <img class="menu-img" src="assets/images/categories/food-dining.png">
@@ -65,18 +66,21 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/basket']" class="nav-link  menu-item">
-                        <img class="img-fluid" src="assets/images/icons/basket_icon.png" alt="Theme-Logo" /></a>
+                        <img class="img-fluid" src="assets/images/icons/basket_icon.png" alt="Theme-Logo" />
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <span class="badge badge-info fs-bage" *ngIf="this.cartlength > 0">{{this.cartlength}}</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" [routerLink]="['/Signup']" class="nav-link  menu-item">
                         <img class="img-fluid" src="assets/images/icons/profile_icon.png" alt="arrow" /></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="#" [routerLink]="['/basket']" class="nav-link  menu-item">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         <span class="badge badge-info fs-bage" *ngIf="this.cartlength > 0">{{this.cartlength}}</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
