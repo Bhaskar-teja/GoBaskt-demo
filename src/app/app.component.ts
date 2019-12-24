@@ -11,7 +11,7 @@ declare const $: any;
 })
 export class AppComponent implements OnInit{
   title = 'gobasket';
-
+  allowLocation: true;
   myChatFun(){
     //***CODE_START
   function assertion(options, callback) {
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit{
     isTTSEnabled: true,
     isSpeechEnabled: true,
     allowGoogleSpeech: true,
-    allowLocation: true,
+    
     loadHistory: true,
     messageHistoryLimit: 10,
     autoEnableSpeechAndTTS: false,

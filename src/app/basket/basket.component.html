@@ -1,7 +1,12 @@
 <div class="px-4 px-lg-0">
     <div class="container">
         <h3 class="clr-dark-blue py-3">Your<span class=" f-bold"> Basket</span></h3>
+        <label class="checkbox-label-select">
+            <input type="checkbox"[(ngModel)]="masterSelected" name="list_name" value="m1" (change)="checkUncheckAll()"/><span class="pl-5">Select/ Unselect All</span>
+            <span class="checkbox-custom rectangular"></span>
+        </label>
     </div>
+    
     <div class="pb-5">
         <div class="container">
             <div class="row">
@@ -10,18 +15,18 @@
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
-                                <tr>
+                                <tr *ngFor="let item of checklist">
                                     <th scope="row" class="border-0 my-auto">
                                         <div class="">
                                             <div class="checkbox-container">
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()"/>
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
                                             </div>
                                         </div>
                                     </th>
-                                    <th scope="row" class="border-0">
+                                    <th scope="row" class="border-0" >
                                         <div class="p-2">
                                             <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg"
                                                 alt="" width="70" class="img-fluid rounded shadow-sm">
@@ -39,7 +44,7 @@
                                         <p class="f-bold">OFF</p>
                                     </td>
                                 </tr>
-                                <tr>
+                              <!--   <tr>
                                     <th scope="row" class="border-0 my-auto">
                                         <div class="">
                                             <div class="checkbox-container">
@@ -66,8 +71,8 @@
                                         <h3><strong>15%</strong></h3>
                                         <p class="f-bold">OFF</p>
                                     </td>
-                                </tr>
-                                <tr>
+                                </tr> -->
+                               <!--  <tr>
                                     <th scope="row" class="border-0 my-auto">
                                         <div class="">
                                             <div class="checkbox-container">
@@ -93,7 +98,7 @@
                                         <h3><strong>$79.00</strong></h3>
                                         <p class="f-bold">OFF</p>
                                     </td>
-                                </tr>
+                                </tr> -->
                                 <!--  <tr>
                                     <td  class="border-0 my-auto">
                                         <div class="">
@@ -125,12 +130,12 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6 clr-white f-28">
-                    <span class="f-bold">03</span><span class="px-3">Coupons Selected</span><span><a class="btn-white f-bold">
-                            Clear all</a></span>
+                    <span class="f-bold">  {{this.brandoffercarts.length + +this.localoffercarts.length}}&nbsp;{{(this.brandoffercarts.length + +this.localoffercarts.length) > 1 ? 'Coupons' : 'offer'}}</span><span class="px-3"> Selected</span><span><!-- <a class="btn-white f-bold">
+                            Clear all</a> --></span>
                 </div>
                 <div class="col-md-6 text-right">
                     <button class="btn btn-default transparent-btn-css mx-3" type="submit">Email It</button>
-                    <button class="btn btn-default white-btn-css f-bold" type="submit">Print Coupons</button>
+                    <button class="btn btn-default white-btn-css f-bold"  (click)="printComponent()" type="submit">Print Coupons</button>
                 </div>
             </div>
         </div>

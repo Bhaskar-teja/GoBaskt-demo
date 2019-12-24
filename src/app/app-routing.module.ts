@@ -5,6 +5,7 @@ import { BasketComponent} from '../app/basket/basket.component'
 import { LocalOffersComponent} from '../app/local-offers/local-offers.component'
 import { LoginComponent } from '../app/login/login.component';
 import { SignupComponent } from '../app/signup/signup.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { _getOptionScrollPosition } from '@angular/material/core';
 
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path: "basket", component: BasketComponent},
   {path: "localoffers", component: LocalOffersComponent},
   {path: "productdetails", component: ProductDetailsComponent},
+  {path: "result", component: SearchResultComponent},
+
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
   ];
 

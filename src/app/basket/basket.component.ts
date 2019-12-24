@@ -16,8 +16,44 @@ export class BasketComponent implements OnInit {
   cartlength: any = 0;
   minimizestate : any = 0;
   items : any = [];
+  masterSelected:boolean;
+  checklist:any;
+  checkedList:any;
   
-  constructor(private communicationService: CommunicationService) { }
+  constructor(private communicationService: CommunicationService) { 
+
+    this.masterSelected = false;
+    this.checklist = [
+      {id:1,value:'Elenor Anderson',isSelected:false},
+      {id:2,value:'Caden Kunze',isSelected:true},
+      {id:3,value:'Ms. Hortense Zulauf',isSelected:false}
+    ];
+    this.getCheckedItemList();
+  }
+
+
+  checkUncheckAll() {
+    for (var i = 0; i < this.checklist.length; i++) {
+      this.checklist[i].isSelected = this.masterSelected;
+    }
+    this.getCheckedItemList();
+  }
+  isAllSelected() {
+    this.masterSelected = this.checklist.every(function(item:any) {
+        return item.isSelected == true;
+      })
+    this.getCheckedItemList();
+  }
+
+  getCheckedItemList(){
+    this.checkedList = [];
+    for (var i = 0; i < this.checklist.length; i++) {
+      if(this.checklist[i].isSelected)
+      this.checkedList.push(this.checklist[i]);
+    }
+    this.checkedList = JSON.stringify(this.checkedList);
+  }
+
 
   ngOnInit() {
     this.onLoadBasket();

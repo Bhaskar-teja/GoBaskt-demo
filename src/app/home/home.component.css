@@ -772,6 +772,7 @@ body {
     width: 100%;
     margin-left: -3px;
     position: absolute;
+    cursor: pointer;
 }
 .save-btn-pos{
   bottom: 30px;

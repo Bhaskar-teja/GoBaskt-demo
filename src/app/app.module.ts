@@ -28,6 +28,7 @@ import { HomeService  } from '../app/shared/core/service/home.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
@@ -41,7 +42,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    ProductDetailsComponent    
+    ProductDetailsComponent,
+    SearchResultComponent    
   ],
   imports: [
     FormsModule,
