@@ -9,6 +9,24 @@
     </div>
   </div>
   <!-- Search -->
+
+<!--   <div class="container" fxLayout="column" fxLayoutAlign="center">
+
+    <div fxFlex>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+    </div>
+
+    <div fxFlex fxFlexAlign="center"
+         class="autocomplete-container">
+      <mat-google-maps-autocomplete (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                                    (onLocationSelected)="onLocationSelected($event)"
+                                    (onGermanAddressMapped)="onGermanAddressMapped($event)">
+      </mat-google-maps-autocomplete>
+    </div>
+
+  </div> -->
   <div class="bg-light-blue">
     <div class="container mt-0">
       <form class="waves-light" mdbWavesEffect>
@@ -171,7 +189,7 @@
                 </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1" *ngFor="let item of localOfferDetails">
-                    <div  class="outline-none" [routerLink]="['/productdetails']">
+                    <div  class="outline-none" [routerLink]="['/productdetails',item.id]">
                       <img class="img-fluid cursor-pointer" src="{{item.webOfferImage1}}" alt="">
                       <div class="desc">
                         <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">

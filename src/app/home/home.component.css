@@ -242,9 +242,6 @@
 }
 
 
-body {
-  background: #f2f2f2;
-}
 
 .selectdiv {
   position: relative;
@@ -398,10 +395,7 @@ select:focus {
 
 /* robbon */
 
-body {
-  background: #ddd;
-  font: 14px/1.6em sans-serif;
-}
+
 
 .ribbon {
   width: 150px;
@@ -706,14 +700,11 @@ body {
     color: #000;
     transition-duration: 0.4s;
     font-weight: 500; }
-    #explore .explore-gallery .nav li a:hover,
-    .home .explore-gallery .nav li a:hover {
-      background: #ec7957;
-      color: #fff; }
+ 
   #explore .explore-gallery .nav .active,
   .home .explore-gallery .nav .active {
     color: #fff;
-    background: #ec7957; }
+    background: #41499b; }
   #explore .explore-top-content .heading1,
   .home .explore-top-content .heading1 {
     text-transform: uppercase;
@@ -726,7 +717,7 @@ body {
     font-size: 25px;
     text-align: right;
     font-weight: 700;
-    color: #ec7957;
+    color: #41499b;
     margin: 0;
     line-height: 35px;
     letter-spacing: 2px; }

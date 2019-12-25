@@ -14,13 +14,10 @@ export class HttpService {
     return new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Accept', 'application/json; charset=utf-8')
-      .set("Access-Control-Allow-Origin", "*")
       .set( 'Access-Control-Allow-Origin','*')
       .set( 'Access-Control-Allow-Methods','GET')
       .set('Access-Control-Allow-Headers','application/json',)
-     
-      
-      // .set('Authorization', this.getToken());
+
   }
 
   getToken() {
@@ -42,6 +39,8 @@ export class HttpService {
   getOffers() {
     return this.http.get(authApiUrl.gobasktUrl, { headers: this.getHeaderAfterToken(), observe: 'response'});
   }
-
+  getlmOffers(id) {
+    return this.http.get(authApiUrl.getlmOfferUrl + '/' + id, { headers: this.getHeaderAfterToken(), observe: 'response'})
+  }
  
 }

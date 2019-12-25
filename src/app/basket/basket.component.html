@@ -2,49 +2,52 @@
     <div class="container">
         <h3 class="clr-dark-blue py-3">Your<span class=" f-bold"> Basket</span></h3>
         <label class="checkbox-label-select">
-            <input type="checkbox"[(ngModel)]="masterSelected" name="list_name" value="m1" (change)="checkUncheckAll()"/><span class="pl-5">Select/ Unselect All</span>
+            <input type="checkbox" [(ngModel)]="masterSelected" name="list_name" value="m1"
+                (change)="checkUncheckAll()" /><span class="pl-5">Select/ Unselect All</span>
             <span class="checkbox-custom rectangular"></span>
         </label>
     </div>
-    
-    <div class="pb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mb-5">
-                    <!-- Shopping cart table -->
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                                <tr *ngFor="let item of checklist">
-                                    <th scope="row" class="border-0 my-auto">
-                                        <div class="">
-                                            <div class="checkbox-container">
-                                                <label class="checkbox-label">
-                                                    <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()"/>
-                                                    <span class="checkbox-custom rectangular"></span>
-                                                </label>
+    <div id="print-section">
+        <div class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-5">
+                        <!-- Shopping cart table -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr *ngFor="let item of checklist">
+                                        <th scope="row" class="border-0 my-auto">
+                                            <div class="">
+                                                <div class="checkbox-container">
+                                                    <label class="checkbox-label">
+                                                        <input type="checkbox" [(ngModel)]="item.isSelected"
+                                                            name="list_name" value="{{item.id}}"
+                                                            (change)="isAllSelected()" />
+                                                        <span class="checkbox-custom rectangular"></span>
+                                                    </label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </th>
-                                    <th scope="row" class="border-0" >
-                                        <div class="p-2">
-                                            <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg"
-                                                alt="" width="70" class="img-fluid rounded shadow-sm">
-                                            <div class="ml-3 d-inline-block align-middle">
-                                                <h5 class="mb-0"> <a href="#"
-                                                        class="text-dark d-inline-block align-middle">Jersey Mike’s
-                                                        Subs</a></h5><span
-                                                    class="text-muted font-weight-normal font-italic d-block">Category:
-                                                    Watches</span>
+                                        </th>
+                                        <th scope="row" class="border-0">
+                                            <div class="p-2">
+                                                <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg"
+                                                    alt="" width="70" class="img-fluid rounded shadow-sm">
+                                                <div class="ml-3 d-inline-block align-middle">
+                                                    <h5 class="mb-0"> <a href="#"
+                                                            class="text-dark d-inline-block align-middle">Jersey Mike’s
+                                                            Subs</a></h5><span
+                                                        class="text-muted font-weight-normal font-italic d-block">Category:
+                                                        Watches</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </th>
-                                    <td class="border-0 align-middle clr-blue-light">
-                                        <h3><strong>$79.00</strong></h3>
-                                        <p class="f-bold">OFF</p>
-                                    </td>
-                                </tr>
-                              <!--   <tr>
+                                        </th>
+                                        <td class="border-0 align-middle clr-blue-light">
+                                            <h3><strong>$79.00</strong></h3>
+                                            <p class="f-bold">OFF</p>
+                                        </td>
+                                    </tr>
+                                    <!--   <tr>
                                     <th scope="row" class="border-0 my-auto">
                                         <div class="">
                                             <div class="checkbox-container">
@@ -72,7 +75,7 @@
                                         <p class="f-bold">OFF</p>
                                     </td>
                                 </tr> -->
-                               <!--  <tr>
+                                    <!--  <tr>
                                     <th scope="row" class="border-0 my-auto">
                                         <div class="">
                                             <div class="checkbox-container">
@@ -99,7 +102,7 @@
                                         <p class="f-bold">OFF</p>
                                     </td>
                                 </tr> -->
-                                <!--  <tr>
+                                    <!--  <tr>
                                     <td  class="border-0 my-auto">
                                         <div class="">
                                             <p>Add more coupons to your Basket</p>
@@ -110,16 +113,17 @@
                                     </td>
                                 </tr> -->
 
-                            </tbody>
-                        </table>
-                        <div class="">
-                            <p class="clr-blue-light">Add more coupons to your Basket</p>
-                            <a href="#" [routerLink]="['/home']" class="clr-blue-light f-bold">
-                                <img class="img-fluid vertical-bottom" src="assets/images/icons/back.png"
-                                    alt="Theme-Logo" /><span class="f-22 f-bold pl-2">Continue Shopping</span></a>
+                                </tbody>
+                            </table>
+                            <div class="">
+                                <p class="clr-blue-light">Add more coupons to your Basket</p>
+                                <a href="#" [routerLink]="['/home']" class="clr-blue-light f-bold">
+                                    <img class="img-fluid vertical-bottom" src="assets/images/icons/back.png"
+                                        alt="Theme-Logo" /><span class="f-22 f-bold pl-2">Continue Shopping</span></a>
+                            </div>
                         </div>
+                        <!-- End -->
                     </div>
-                    <!-- End -->
                 </div>
             </div>
         </div>
@@ -130,12 +134,14 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-6 clr-white f-28">
-                    <span class="f-bold">  {{this.brandoffercarts.length + +this.localoffercarts.length}}&nbsp;{{(this.brandoffercarts.length + +this.localoffercarts.length) > 1 ? 'Coupons' : 'offer'}}</span><span class="px-3"> Selected</span><span><!-- <a class="btn-white f-bold">
-                            Clear all</a> --></span>
+                    <span class="f-bold">
+                        {{this.brandoffercarts.length + +this.localoffercarts.length}}&nbsp;{{(this.brandoffercarts.length + +this.localoffercarts.length) > 1 ? 'Coupons' : 'offer'}}</span><span
+                        class="px-3"> Selected</span><span>
+         </span>
                 </div>
                 <div class="col-md-6 text-right">
                     <button class="btn btn-default transparent-btn-css mx-3" type="submit">Email It</button>
-                    <button class="btn btn-default white-btn-css f-bold"  (click)="printComponent()" type="submit">Print Coupons</button>
+                    <button printSectionId="print-section" ngxPrint class="btn btn-default white-btn-css f-bold" type="submit">Print Coupons</button>
                 </div>
             </div>
         </div>

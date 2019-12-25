@@ -5,6 +5,7 @@ export const authApiUrl = {
     gobasktUrl: createAuthUrl('/lmOffers/getLmOffers'),
     postRegisterUrl: createAuthUrl('/createUser'),
     getRegisterUrl: createAuthUrl('/getUser'),
+    getlmOfferUrl: createAuthUrl('/lmOffers/id'),
 }
 
 function createAuthUrl(actionName: string): string {

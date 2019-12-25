@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from '../shared/core/service/communication.service'
 import * as $ from 'jquery';
 
+
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
@@ -91,13 +92,6 @@ export class BasketComponent implements OnInit {
     this.currentSelection = value;
   }
 
-  printComponent() {
-    let printContents = document.getElementById("printcomponent").innerHTML;
-    let originalContents = document.body.innerHTML;
-    document.body.innerHTML = printContents;
-    window.print();
-    document.body.innerHTML = originalContents;
-  }
 
   emailComponent() {
     setTimeout(() => {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpService } from '../shared/core/service/http.service';
 
 @Component({
   selector: 'app-product-details',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
+  id: any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, public httpService: HttpService) { }
 
   ngOnInit() {
+    this.id = this.route.snapshot.params['id'];
+    this.lmOffer();
   }
-
+  lmOffer() {
+    this.httpService.getlmOffers(this.id).subscribe((response: any) => {
+      console.log(response);
+      if (response.status === 200) {
+      }
+    }, error => {
+      console.log(error);
+    });
+  }
 }

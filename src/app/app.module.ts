@@ -21,6 +21,9 @@ import { BasketComponent } from './basket/basket.component';
 import { LocalOffersComponent } from './local-offers/local-offers.component';
 import { FooterComponent } from './footer/footer.component';
 import { OwlModule } from 'ngx-owl-carousel';
+import {NgxPrintModule} from 'ngx-print';
+import { AgmCoreModule } from '@agm/core';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
 
 // Services
 import { CommunicationService  } from '../app/shared/core/service/communication.service';
@@ -61,7 +64,13 @@ import { SearchResultComponent } from './search-result/search-result.component';
     BrowserAnimationsModule,
     SliderModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    NgxPrintModule,
+    MatGoogleMapsAutocompleteModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY',
+      libraries: ['places']
+    }),
   ],
   providers: [HttpService,HomeService,CommunicationService],
   bootstrap: [AppComponent]
