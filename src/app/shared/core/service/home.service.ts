@@ -12,7 +12,7 @@ export class HomeService {
 
 
   constructor(private http: Http){
-    this.usersUrl = 'http://3.135.248.190:8083/';
+    this.usersUrl = 'http://18.220.49.239:8083/';
   }
 
 

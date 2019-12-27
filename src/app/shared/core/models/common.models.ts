@@ -4,7 +4,14 @@ export class loginParams {
     constructor() {
     }
 }
-
+export class registrationParams {
+    emailId: string;
+    password: any;
+    firstName: string;
+    lastName: string;
+    constructor() {
+    }
+}
 
 export type Product = {
     title: string;

@@ -18,3 +18,6 @@
     border-bottom: 1px solid #dcdcdc;
     padding-left: 0;
 }
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus{
+    box-shadow: none;
+}

@@ -9,6 +9,12 @@ import { HelperService } from './helper.service';
   providedIn: 'root'
 })
 export class HttpService {
+  getRegisterUrl() {
+    throw new Error("Method not implemented.");
+  }
+  registerUser(RegistrationData: import("../models/common.models").registrationParams) {
+    throw new Error("Method not implemented.");
+  }
   constructor(public http: HttpClient, private helperService: HelperService) { }
   getHeaderAfterToken() {
     return new HttpHeaders()
@@ -27,9 +33,10 @@ export class HttpService {
       return;
     }
   }
+  
 
   postCreateUser(message) {
-    return this.http.post(authApiUrl.postRegisterUrl, message, { headers: this.getHeaderAfterToken(), observe: 'response' });
+    return this.http.post("http://18.220.49.239:8080/gobaskt/createUser", message, { headers: this.getHeaderAfterToken(), observe: 'response' });
   }
 
   getUser() {
@@ -39,6 +46,7 @@ export class HttpService {
   getOffers() {
     return this.http.get(authApiUrl.gobasktUrl, { headers: this.getHeaderAfterToken(), observe: 'response'});
   }
+  
   getlmOffers(id) {
     return this.http.get(authApiUrl.getlmOfferUrl + '/' + id, { headers: this.getHeaderAfterToken(), observe: 'response'})
   }

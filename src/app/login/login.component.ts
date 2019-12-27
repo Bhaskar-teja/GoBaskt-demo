@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   //   this.router.navigate(['/auth/home']);
   // }
   get f() { return this.loginForm.controls; }
-  onSubmit() {
+/*   onSubmit() {
     console.log(this.loginForm.value);
     this.httpService.postCreateUser(this.loginForm.value).subscribe((response: any) => {
       console.log(response);
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     }, error => {
       console.log(error);
     });
-}
+} */
 
   // login(loginData) {
   //   this.httpService.postCreateUser(loginData).subscribe((response: any) => {

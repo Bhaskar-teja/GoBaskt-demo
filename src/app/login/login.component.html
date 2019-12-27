@@ -19,17 +19,19 @@
                                     *ngIf="f.emailId.errors?.required">Username is required</span>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control inpt" formControlName="password" id="password"
-                                    placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <input type="password" class="form-control inpt" formControlName="password"
+                                    id="password" placeholder="Password"
+                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
                                 <span class="invalid-feedback cust-feedback-align"
                                     *ngIf="f.password.errors?.required">Password is required</span>
                             </div>
                         </form>
                         <div class="form-group last">
-                                <button type="submit" [routerLink]="['/home']" (click)="onSubmit()" class="col-sm-12 btn-clr-blue btn btn-sm">
-                                    Login </button>
-                                <p class="text-center pt-3">Trying to connect to us to be a partner ? <span
-                                        class="f-bold clr-blue">Click Here</span></p>
+                            <button type="submit" [routerLink]="['/home']" 
+                                class="col-sm-12 btn-clr-blue btn btn-sm">
+                                Login </button>
+                            <p class="text-center pt-3">Trying to connect to us to be a partner ? <span
+                                    class="f-bold clr-blue">Click Here</span></p>
                         </div>
                     </div>
                 </div>
