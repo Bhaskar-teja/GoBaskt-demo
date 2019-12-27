@@ -6,6 +6,7 @@ export const authApiUrl = {
     postRegisterUrl: createAuthUrl('/createUser'),
     getRegisterUrl: createAuthUrl('/getUser'),
     getlmOfferUrl: createAuthUrl('/lmOffers/id'),
+    getBasktOffers: createAuthUrl('/basket/coupons'),
 }
 
 function createAuthUrl(actionName: string): string {

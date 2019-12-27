@@ -104,7 +104,7 @@
                 </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1" *ngFor="let item of localOfferDetails">
-                    <div class="outline-none" [routerLink]="['/productdetails']">
+                    <div class="outline-none" [routerLink]="['/productdetails',item.id]">
                       <img class="img-fluid cursor-pointer" src="{{item.webOfferImage1}}" alt="">
                       <div class="desc">
                         <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">
@@ -124,7 +124,7 @@
                       </div>
                     </div>
                     <div class="text-center save-btn-pos">
-                      <button class="btn-clr-blue-save" (click)="addToCartLocal(localOfferDetails)">
+                      <button class="btn-clr-blue-save" (click)="addToCartLocal(item.id)">
                         Save</button>
                     </div>
                   </div>
@@ -282,7 +282,7 @@
                 </div>
                 <div class="row m-0 mt-3">
                   <div class="col-md-3 image-trans p-1" *ngFor="let item of localOfferDetails">
-                    <div  class="outline-none" [routerLink]="['/productdetails']">
+                    <div  class="outline-none" [routerLink]="['/productdetails',item.id]">
                       <img class="img-fluid cursor-pointer" src="{{item.webOfferImage1}}" alt="">
                       <div class="desc">
                         <img class="card-img bg-transparent" src="assets/images/coupon-background.png" alt="">

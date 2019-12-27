@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   registraionSuccess = false;
   registrationMsg: any;
   RegistrationData = new registrationParams();
+  errorMsg: any;
 
   constructor(private formBuilder: FormBuilder, private httpService: HttpService, private router: Router) { }
 
@@ -55,6 +56,8 @@ export class SignupComponent implements OnInit {
       }
     }, error => {
       console.log(error);
+      this.errorMsg = error.error.statusMessage;
+      console.log(this.errorMsg);
     });
   }
 

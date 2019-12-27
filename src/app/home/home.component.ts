@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   localOfferDetails: [];
   localoffercart: any = [];
   cartlength: any = 0;
+  addToBasket: any;
 
  /*  public appearance = Appearance;
   public zoom: number;
@@ -76,16 +77,17 @@ export class HomeComponent implements OnInit {
 
   onLoadCart() {
     if (localStorage.getItem("localoffercart")) {
-      
       this.localoffercart = JSON.parse(localStorage.getItem("localoffercart"));
       console.log(this.localoffercart)
     }
-    this.cartlength = 0;
-    if(this.localoffercart && this.localoffercart.length){
-       this.cartlength += this.localoffercart.length;
-    }
+     this.cartlength = 0;
+     if(this.localoffercart && this.localoffercart.length){
+        this.cartlength += this.localoffercart.length;
+        console.log(this.cartlength);
+     }
    
-    this.communicationService.setSubject({value: this.cartlength});
+     this.communicationService.setSubject({value: this.cartlength});
+   // this.cartlength = this.localoffercart;
     }
   
 
@@ -101,11 +103,30 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  addToCartLocal(param) {
-    console.log(param);
-    this.localoffercart.push(param);
-    localStorage.setItem("localoffercart", JSON.stringify(this.localoffercart));
-    this.onLoadCart();
+  addToCartLocal(id) {
+    console.log(id);
+    this.httpService.getSaveOffers(id).subscribe((response: any) => {
+      console.log(response);
+      if (response.status === 200) {
+        this.httpService.getBasketDetails().subscribe((response: any) => {
+          console.log(response);
+          if (response.status === 200) {
+            if(response.body.data.length!==0){
+              this.addToBasket = response.body.data.length;
+              console.log(this.addToBasket);
+              this.localoffercart.push(this.addToBasket);
+              localStorage.setItem("localoffercart", JSON.stringify(this.localoffercart));
+              console.log(this.localoffercart);
+              this.onLoadCart();
+            }
+          }
+        }, error => {
+          console.log(error);
+        });
+      }
+    }, error => {
+      console.log(error);
+    });
   }
 
   

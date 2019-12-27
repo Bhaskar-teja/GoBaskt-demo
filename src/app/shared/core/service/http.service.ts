@@ -36,7 +36,7 @@ export class HttpService {
   
 
   postCreateUser(message) {
-    return this.http.post("http://18.220.49.239:8080/gobaskt/createUser", message, { headers: this.getHeaderAfterToken(), observe: 'response' });
+    return this.http.post("http://18.223.122.108:8080/gobaskt/createUser", message, { headers: this.getHeaderAfterToken(), observe: 'response' });
   }
 
   getUser() {
@@ -46,9 +46,16 @@ export class HttpService {
   getOffers() {
     return this.http.get(authApiUrl.gobasktUrl, { headers: this.getHeaderAfterToken(), observe: 'response'});
   }
-  
+
   getlmOffers(id) {
     return this.http.get(authApiUrl.getlmOfferUrl + '/' + id, { headers: this.getHeaderAfterToken(), observe: 'response'})
   }
+
+  getSaveOffers(id) {
+    return this.http.get("http://18.223.122.108:8086/gobaskt/basket/coupons" + '/' + id, { headers: this.getHeaderAfterToken(), observe: 'response'})
+  } 
+  getBasketDetails() {
+    return this.http.get("http://18.223.122.108:8086/gobaskt/basket/getBasket" , { headers: this.getHeaderAfterToken(), observe: 'response'});
+  } 
  
 }

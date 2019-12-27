@@ -56,7 +56,11 @@
               <div class="form-group last">
                 <div class="col-sm-12">
                   <button type="submit" class="col-sm-12 btn-clr-blue btn btn-sm">
-                    Sign in</button>
+                    Sign Up</button>
+                    <div *ngIf="errorMsg">
+                    <p class="mail-already-exist">Your Email {{errorMsg}}</p>
+                    </div>
+                    
                   <p class="text-center pt-3">Already a member?<a [routerLink]="['/Login']"
                       class="cursor-pointer f-bold clr-blue">Click Here</a></p>
                 </div>

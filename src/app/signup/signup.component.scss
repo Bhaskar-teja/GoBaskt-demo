@@ -21,3 +21,9 @@
 .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus{
     box-shadow: none;
 }
+.mail-already-exist{
+    text-align: center;
+    padding-top: 16px;
+    color: #f00;
+    font-weight: 600;
+}

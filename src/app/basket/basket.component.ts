@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from '../shared/core/service/communication.service'
 import * as $ from 'jquery';
+import { HttpService } from '../shared/core/service/http.service';
 
 
 @Component({
@@ -10,6 +11,7 @@ import * as $ from 'jquery';
 })
 export class BasketComponent implements OnInit {
 
+  basktOffer: [];
   starsCount: any = 4.5;
   currentSelection: any = "All";
   brandoffercarts: any = [];
@@ -21,14 +23,10 @@ export class BasketComponent implements OnInit {
   checklist:any;
   checkedList:any;
   
-  constructor(private communicationService: CommunicationService) { 
+  constructor(private communicationService: CommunicationService, public httpService: HttpService, ) { 
 
     this.masterSelected = false;
-    this.checklist = [
-      {id:1,value:'Elenor Anderson',isSelected:false},
-      {id:2,value:'Caden Kunze',isSelected:true},
-      {id:3,value:'Ms. Hortense Zulauf',isSelected:false}
-    ];
+    this.checklist = [];
     this.getCheckedItemList();
   }
 
@@ -37,17 +35,29 @@ export class BasketComponent implements OnInit {
     for (var i = 0; i < this.checklist.length; i++) {
       this.checklist[i].isSelected = this.masterSelected;
     }
-    this.getCheckedItemList();
+   // this.getCheckedItemList();
   }
   isAllSelected() {
     this.masterSelected = this.checklist.every(function(item:any) {
         return item.isSelected == true;
       })
-    this.getCheckedItemList();
+    // this.getCheckedItemList();
   }
 
   getCheckedItemList(){
     this.checkedList = [];
+
+    this.httpService.getBasketDetails().subscribe((response: any) => {
+      console.log(response);
+      if (response.status === 200) {
+        response.body.data.map(item => this.checklist.push(item));
+        // this.basktOffer = response.body.data;
+       console.log(this.checklist);
+      }
+    }, error => {
+      console.log(error);
+    });
+
     for (var i = 0; i < this.checklist.length; i++) {
       if(this.checklist[i].isSelected)
       this.checkedList.push(this.checklist[i]);
@@ -69,6 +79,7 @@ export class BasketComponent implements OnInit {
   }
 
   onLoadBasket() {
+    
     if (localStorage.getItem("brandoffercart")) {
       this.brandoffercarts = JSON.parse(localStorage.getItem("brandoffercart"));
     }
@@ -134,5 +145,6 @@ export class BasketComponent implements OnInit {
       localStorage.setItem("localoffercart", JSON.stringify(this.localoffercarts));
     }
     this.onLoadBasket();
+
   }
 }

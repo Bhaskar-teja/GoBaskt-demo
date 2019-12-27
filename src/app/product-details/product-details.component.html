@@ -2,12 +2,12 @@
     <div class="bg-light-blue">
         <div class="container mt-0 pt-5">
             <div class="row">
-                <div class="col-sm-5 pb-5" *ngFor="let item of lmOffer">
-                    <p class="m-0">{{item.lmid}}</p>
-                    <h3 class="text-left f-bold">{{item.lmname}}</h3>
-                    <h5 class="clr-blue-light f-bold pb-3">{{item.lmofferValue}} {{item.lmofferType}}</h5>
+                <div class="col-sm-5 pb-5" *ngIf="lmOfferData"> 
+                    <p class="m-0">{{lmOfferData.lmid}} </p>
+                    <h3 class="text-left f-bold">{{lmOfferData.lmname}} </h3>
+                    <h5 class="clr-blue-light f-bold pb-3">{{lmOfferData.lmofferValue}} {{lmOfferData.lmofferType}} </h5>
                     <p>
-                        <!-- {{item.lmdescription}} -->Established in 2010, United Finance is an European multi-national
+                        {{lmOfferData.lmdescription}} Established in 2010, United Finance is an European multi-national
                         company providing
                         product as a service. Amid the constant change in technology and every companies' desire to
                         equip with the latest products, comes the monetary constraint.</p>
@@ -28,14 +28,14 @@
             <div class="row pt-5">
                 <h5 class="col-sm-12 ltr-space f-bold">Description</h5>
                 <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-6" *ngFor="let item of lmOffer">
+                    <div class="row" *ngIf="lmOfferData">
+                        <div class="col-sm-6" >
                             <div class="row py-2">
                                 <div class="col-sm-6 ltr-space">
                                     LM Name
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.lmname}}
+                                    {{lmOfferData.lmname}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -43,7 +43,7 @@
                                     LM Description
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.lmdescription}}
+                                    {{lmOfferData.lmdescription}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -51,7 +51,7 @@
                                     LM Offer Type
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.lmofferType}}
+                                    {{lmOfferData.lmofferType}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -59,7 +59,7 @@
                                     LM Offer Value
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.lmofferValue}}
+                                    {{lmOfferData.lmofferValue}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -75,7 +75,7 @@
                                     Offer Region
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.offerRegion}}
+                                    {{lmOfferData.offerRegion}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -83,7 +83,7 @@
                                     Offer Start Date
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.offerStartDate}}
+                                    {{lmOfferData.offerStartDate}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -91,7 +91,7 @@
                                     Offer Expiry
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.offerExpiryDate}}
+                                    {{lmOfferData.offerExpiryDate}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -99,7 +99,7 @@
                                     Offer Terms & Conditions
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.offerTermsandConditions}}
+                                    {{lmOfferData.offerTermsandConditions}}
                                 </div>
                             </div>
                             <div class="row py-2">
@@ -107,7 +107,7 @@
                                     Offer Currency
                                 </div>
                                 <div class="col-sm-6 ltr-space f-bold">
-                                    {{item.offerCurrency}}
+                                    {{lmOfferData.offerCurrency}}
                                 </div>
                             </div>
                         </div>
